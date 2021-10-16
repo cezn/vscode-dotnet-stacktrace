@@ -1,0 +1,30 @@
+{
+  "name": "vscode-dotnet-stacktrace",
+  "description": "Open dotnet stacktrace in new editor",
+  "version": "0.0.1",
+  "publisher": "cezn",
+  "repository": "https://github.com/cezn/vscode-dotnet-stacktrace",
+  "engines": {
+    "vscode": "^1.32.0"
+  },
+  "activationEvents": [
+    "onLanguage:csharp"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "dotnetStacktrace.printStacktrace",
+        "title": ".NET Stacktrace: Print Stacktrace"
+      }
+    ]
+  },
+  "scripts": {
+    "link": "ln -s $PWD ~/.vscode/extensions/vscode-dotnet-stacktrace",
+    "link:remote": "ln -s $PWD ~/.vscode-server/extensions/vscode-dotnet-stacktrace"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.32.0",
+    "@types/node": "^16.3.1"
+  }
+}
